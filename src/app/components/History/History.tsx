@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { useCalculatorContext } from "../../context/CalculatorContext/CalculatorContext";
 
 const History = () => {
@@ -12,12 +13,13 @@ const History = () => {
   return (
     <div className="flex flex-col gap-3">
       <h1>Click below for previous histroy 🥳🥳</h1>
-      <button
+      <Link
+        href={"/history"}
         className="border-2 border-blue-950 rounded-lg"
         onClick={getHistory}
       >
         History
-      </button>
+      </Link>
     </div>
   );
 };
